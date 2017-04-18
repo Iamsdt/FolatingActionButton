@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:fillAfter="true">
+    <!-- android:fillAfter="true" is ensure thata animation transformation occur
+     only after finish animation -->
+
+    <!-- we change animation from 0 to 80 percent -->
+    <!-- pivot x or y means it's is the center point of animation -->
+    <scale
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:toXScale=".8"
+        android:toYScale=".8"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration = "300"
+        android:interpolator = "@android:anim/linear_interpolator"/>
+
+    <!-- now change the animation of the opacity of the object -->
+    <!-- now we change alpha 0 to 1 that's means object's disappears -->
+    <!-- accelerate_interpolator means that's animation start's slowly -->
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"
+        android:duration = "300"
+        android:interpolator = "@android:anim/accelerate_interpolator"/>
+
+
+</set>
